@@ -2,9 +2,11 @@
 
 Full-stack YouTube download web app built with **Next.js**, **TypeScript**, **PostgreSQL (Prisma)**, **Firebase Auth**, and **yt-dlp**.
 
+**Live:** [https://downloadvids.isaaclarbi.com/](https://downloadvids.isaaclarbi.com/)
+
 Paste a YouTube URL → fetch available formats → queue a download job → poll status → download the file. Jobs and metadata are tracked in Postgres; auth uses Firebase ID tokens on API routes.
 
-> **Portfolio / educational project.** Respect YouTube’s Terms of Service and copyright law. Only download content you own or have permission to use. This repo is shared to demonstrate full-stack engineering, not to encourage unauthorized downloading.
+> Respect YouTube’s Terms of Service and copyright law. Only download content you own or have permission to use.
 
 ## Highlights
 
