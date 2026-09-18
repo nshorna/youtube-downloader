@@ -1,0 +1,42 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (keep env.sample committed)
+.env
+.env.*
+!.env.example
+!env.sample
+
+# yt-dlp cookies
+**/cookies.txt
+.youtube-cookies.txt
+
+# generated SEO (built via next-sitemap; do not commit prod domains)
+/public/sitemap*.xml
+/public/robots.txt
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+/lib/generated/prisma
+
+# local downloads / temp
+/tmp-downloads/

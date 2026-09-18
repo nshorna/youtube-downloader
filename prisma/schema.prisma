@@ -1,0 +1,40 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client"
+  output   = "../lib/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum DownloadStatus {
+  PENDING
+  PROCESSING
+  COMPLETED
+  FAILED
+}
+
+model Download {
+  id              String         @id @default(uuid())
+  url             String
+  formatId        String
+  videoId         String?
+  videoTitle      String
+  formatResolution String
+  formatExt       String
+  status          DownloadStatus @default(PENDING)
+  filePath        String?
+  fileName        String?
+  error           String?
+  progress        Float?         @default(0)
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+
+  @@index([formatId, videoId])
+}
